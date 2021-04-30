@@ -4,11 +4,7 @@ from astropy.units import Ybarn
 import math
 import xlrd
 import xlwt
-import tkinter as tk
 
-window=tk.Tk()
-window.title('相关度分析')
-window.geometry('300x250')
 def computeCorrelation(X, Y):
     xBar = np.mean(X)
     yBar = np.mean(Y)
@@ -31,7 +27,6 @@ def shift(key, array):
 
 
 if __name__ == '__main__':
-    window.mainloop()
     workBook = xlrd.open_workbook('/Users/zhuxiaowen/Desktop/清研院/测试数据.xlsx')
     allSheetNames = workBook.sheet_names()
     sheet1Name = workBook.sheet_names()[2]
